@@ -12,8 +12,7 @@ LABEL maintainer="Jakub Patkowski"
 
 RUN rm -rf /etc/apk/cache
 
-RUN apk add --no-cache git && \ 
-    --mount=type=ssh \
+RUN --mount=type=ssh \
     git clone https://github.com/JakubPatkowski/ChmuryZadanie1 . && \
     addgroup -S node && \
     adduser -S node -G node && \
@@ -32,7 +31,8 @@ FROM node:iron-alpine3.20
 ARG VERSION
 ENV VERSION=${VERSION:-v1.0.0}
 
-RUN --mount=type=cache,target=/var/cache/apk \
+RUN apk add --no-cache git && \ 
+    --mount=type=cache,target=/var/cache/apk \
     apk update \
     apk upgrade \
     apk add --no-cache curl=8.7.1-r0
