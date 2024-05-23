@@ -10,8 +10,8 @@ LABEL maintainer="Jakub Patkowski"
 
 
 RUN apk add git
-RUN --mount=type=ssh git clone https://github.com/JakubPatkowski/ChmuryZadanie1
-RUN addgroup -S node && \
+RUN --mount=type=ssh git clone https://github.com/JakubPatkowski/ChmuryZadanie1 && \
+    addgroup -S node && \
     adduser -S node -G node && \
     rm -rf /var/cache/apk
 
