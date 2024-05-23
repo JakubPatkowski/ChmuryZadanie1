@@ -1,6 +1,6 @@
 # syntax = docker/dockerfile:experimental
 # ustawienie ekperymentalnej składni Dockefile
-# --------- ETAP 1 ------------------------
+# --------- ETAP 1 -------------------------
 # Ustawienie obrazu bazowego jako 'scratch' (pusty obraz)
 FROM scratch as builder
 # Dodanie zawartości Alpine Linux do obrazu
