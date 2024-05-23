@@ -1,3 +1,5 @@
+# syntax = docker/dockerfile:experimental
+
 # --------- ETAP 1 ------------------------
 
 FROM scratch as builder
