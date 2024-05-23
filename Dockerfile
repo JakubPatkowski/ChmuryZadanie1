@@ -9,11 +9,9 @@ ADD alpine-minirootfs-3.20.0-x86_64.tar.gz /
 LABEL maintainer="Jakub Patkowski"
 
 
-RUN rm -rf /etc/apk/cache
-
 RUN apk add git && \
-    --mount=type=ssh git clone https://github.com/JakubPatkowski/ChmuryZadanie1 && \
-    addgroup -S node && \
+    --mount=type=ssh git clone https://github.com/JakubPatkowski/ChmuryZadanie1
+RUN addgroup -S node && \
     adduser -S node -G node && \
     rm -rf /var/cache/apk
 
