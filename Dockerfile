@@ -32,9 +32,8 @@ ARG VERSION
 ENV VERSION=${VERSION:-v1.0.0}
 
 RUN apk add --no-cache git && \ 
-    --mount=type=cache,target=/var/cache/apk \
-    apk update \
-    apk upgrade \
+    apk update && \
+    apk upgrade && \
     apk add --no-cache curl=8.7.1-r0
     
 USER node
