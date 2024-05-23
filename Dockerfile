@@ -12,7 +12,8 @@ LABEL maintainer="Jakub Patkowski"
 
 RUN rm -rf /etc/apk/cache
 
-RUN --mount=type=ssh \
+RUN apk add --no-cache git && \ 
+    --mount=type=ssh \
     git clone https://github.com/JakubPatkowski/ChmuryZadanie1 . && \
     addgroup -S node && \
     adduser -S node -G node && \
