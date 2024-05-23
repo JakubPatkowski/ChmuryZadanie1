@@ -1,6 +1,3 @@
-# syntax = docker/dockerfile:1.3
-
-
 # --------- ETAP 1 ------------------------
 
 FROM scratch as builder
@@ -12,7 +9,7 @@ LABEL maintainer="Jakub Patkowski"
 
 RUN rm -rf /etc/apk/cache
 
-RUN apk add --no-cache git && \ 
+RUN apk add git && \ 
     --mount=type=ssh \
     git clone https://github.com/JakubPatkowski/ChmuryZadanie1 . && \
     addgroup -S node && \
