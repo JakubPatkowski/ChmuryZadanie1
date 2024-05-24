@@ -1,6 +1,6 @@
 # Plik server.js:
 
-  ![image](https://github.com/JakubPatkowski/ChmuryZadanie1/assets/61908447/d694399f-2797-4848-9abc-0f996cf76492)
+![image](https://github.com/JakubPatkowski/ChmuryZadanie1/assets/61908447/018d03bf-fa0c-4858-b82b-994376d2776e)
 
 # Plik Dockerfile:
 
