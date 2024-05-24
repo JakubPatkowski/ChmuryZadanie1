@@ -1,10 +1,11 @@
 const http = require('http');
 const os = require('os');
-const APIKEY = require("./APIKEY.txt");
-
-// Dane autora
+const fs = require('fs');
+// Dane 
 const author = "Jakub Patkowski"
 const PORT = 8080
+const APIKEY = fs.readFileSync('./APIKEY.txt', 'utf8').trim();
+
 
 // Logowanie informacji o uruchomieniu serweraa
 const logServerStart = () => {
