@@ -1,5 +1,6 @@
 const http = require('http');
 const os = require('os');
+const APIKEY = require("./APIKEY.txt");
 
 // Dane autora
 const author = "Jakub Patkowski"
@@ -17,7 +18,7 @@ const logServerStart = () => {
 // zwracająca obiekt Date z lokalnym czasem klienta
 async function getDate(){ 
     const response = await fetch(
-        `https://api-bdc.net/data/timezone-by-ip?ip=${clientIp}&key=bdc_b4f261d654fb4c7fb0f47af5a46a4878`)
+        `https://api-bdc.net/data/timezone-by-ip?ip=${clientIp}&key=${APIKEY}`)
     const data = await response.json();
     const timeZone = data.ianaTimeId;
     return new Date().toLocaleString("en", {timeZone: timeZone}) + " " + timeZone;
