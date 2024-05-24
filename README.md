@@ -134,7 +134,7 @@ Sprawdzenie ilość vulnerabilities
 
 ![image](https://github.com/JakubPatkowski/ChmuryZadanie1/assets/61908447/03cd90a2-b0e5-4a5d-a718-418c676316d0)
 
-# ================= CZĘŚĆ DODATKOWA ================
+# ===== CZĘŚĆ DODATKOWA =====
 
 # Builder
 
